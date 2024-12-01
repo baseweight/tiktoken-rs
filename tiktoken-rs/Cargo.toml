@@ -31,3 +31,10 @@ rustc-hash = "1.1.0"
 [features]
 async-openai = ["dep:async-openai"]
 dhat-heap = ["dep:dhat"]
+
+[lib]
+name = "_tiktoken"
+crate-type = ["cdylib"]
+
+[dev-dependencies]
+serde_json = "1.0.94" # For JSON parsing in tests
